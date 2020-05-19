@@ -18,6 +18,18 @@ In this project, you'll apply what you've learned on Spark and data lakes to bui
 2. GIT setup and configured for SSH
 3. Docker (If running locally)
 
+### Files
+THe following shows the file in the repository
+```
+├── Dockerfile              ' File to create the Docker Image for Apache Spark
+├── LICENSE
+├── README.md               ' File describing the projects
+├── data                    ' Folder to store data for running locally
+├── data_analysis.ipynb     ' Data Analysis document to study data
+├── dl.cfg.template         ' Configuration file if running against AWS S3  
+└── etl.py                  ' Code file for project
+```
+
 ### Running locally
 1. Clone repository by running `git clone git@github.com:seetdev/dend-p4.git`
 2. Go into the cloned folder
@@ -41,30 +53,37 @@ In this project, you'll apply what you've learned on Spark and data lakes to bui
 ## Transformed Schemas
 
 ### songs_table schema:
+```
 root
  |-- song_id: string (nullable = true)
  |-- title: string (nullable = true)
  |-- artist_id: string (nullable = true)
  |-- year: long (nullable = true)
  |-- duration: double (nullable = true)
+```
 
 ### artists_table schema:
+```
 root
  |-- artist_id: string (nullable = true)
  |-- name: string (nullable = true)
  |-- location: string (nullable = true)
  |-- latitude: double (nullable = true)
  |-- longitude: double (nullable = true)
+```
 
 ### users_table schema:
+```
 root
  |-- user_id: string (nullable = true)
  |-- first_name: string (nullable = true)
  |-- last_name: string (nullable = true)
  |-- gender: string (nullable = true)
  |-- level: string (nullable = true)
+```
 
 ### time_table schema:
+```
 root
  |-- start_time: timestamp (nullable = true)
  |-- hour: integer (nullable = true)
@@ -73,8 +92,10 @@ root
  |-- month: integer (nullable = true)
  |-- year: integer (nullable = true)
  |-- weekday: string (nullable = true)
+```
 
 ### songplays_table schema:
+```
 root
  |-- start_time: timestamp (nullable = true)
  |-- user_id: string (nullable = true)
@@ -86,3 +107,4 @@ root
  |-- user_agent: string (nullable = true)
  |-- year: integer (nullable = true)
  |-- month: integer (nullable = true)
+```
